@@ -18,6 +18,8 @@ fi
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
 ln -sw $HOME/.dotfiles/.zshrc $HOME/.zshrc
+rm -rf $ZSH_CUSTOM/aliases.zsh
+ln -sw $HOME/.dotfiles/aliases.zsh $ZSH_CUSTOM/aliases.zsh
 
 # Update Homebrew recipes
 brew update
@@ -26,22 +28,22 @@ brew update
 brew tap homebrew/bundle
 brew bundle --file ./Brewfile
 
-# Set default MySQL root password and auth type
-mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
-
 # Create a projects directories
 mkdir $HOME/Code
-mkdir $HOME/Herd
 
-# Create Code subdirectories
-mkdir $HOME/Code/blade-ui-kit
-mkdir $HOME/Code/laravel
+# Check for nvm and install if we don't have it
+# https://nodejs.org/en/download/package-manager
+if test ! $(nvm -v); then
+  /bin/bash -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh)"
+  nvm install node
+fi
 
-# Clone Github repositories
-./clone.sh
-
-# Symlink the Mackup config file to the home directory
-ln -s ./.mackup.cfg $HOME/.mackup.cfg
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
+
+# Install Powerlevel10k theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# Run ssh.sh to create new SSH key
+/bin/sh ./.ssh.sh
