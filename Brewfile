@@ -8,7 +8,8 @@ brew 'bash' # Latest Bash version
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'git'
 brew 'mas' # Mac App Store manager
-brew 'rye' # package manager for python
+brew 'uv' # package manager for python
+brew 'tailscale' # Tailscale networking
 
 # Apps
 cask 'visual-studio-code'

@@ -38,7 +38,6 @@ if test ! $(nvm -v); then
   nvm install node
 fi
 
-
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
 
