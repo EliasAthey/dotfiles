@@ -14,12 +14,15 @@ brew 'tailscale' # Tailscale networking
 # Apps
 cask 'visual-studio-code'
 cask 'brave-browser'
+cask 'google-chrome'
 cask 'spotify'
 cask 'discord'
 cask 'slack'
 cask 'gimp'
 cask 'obs'
 cask 'notion'
+cask 'slack'
+cask 'steam'
 cask 'bitwarden'
 
 # Fonts
