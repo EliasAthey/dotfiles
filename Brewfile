@@ -29,5 +29,9 @@ cask 'steam'
 cask 'spotify'
 cask 'bitwarden'
 
+# VS Code Extensions
+vscode "github.copilot"
+vscode "eamodio.gitlens"
+
 # Fonts
 cask 'font-meslo-for-powerlevel10k'
