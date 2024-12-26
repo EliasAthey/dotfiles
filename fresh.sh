@@ -43,6 +43,3 @@ source ./.macos
 
 # Install Powerlevel10k theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
-# Run ssh.sh to create new SSH key
-/bin/sh ./.ssh.sh
