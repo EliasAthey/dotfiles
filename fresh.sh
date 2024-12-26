@@ -43,3 +43,15 @@ source ./.macos
 
 # Install Powerlevel10k theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+echo "...Mac setup complete"
+echo ""
+echo "Install manually:"
+echo "1. EVO (audio interface driver)"
+echo "2. VS Code Extensions:"
+echo "GitLens"
+echo "GitHub Copilot" 
+echo ""
+echo "Configure manually:"
+echo "1. ssh key (/bin/sh ssh.sh)"
+echo "2. OBS profiles"
