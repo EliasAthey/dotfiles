@@ -11,18 +11,22 @@ brew 'mas' # Mac App Store manager
 brew 'uv' # package manager for python
 brew 'tailscale' # Tailscale networking
 
-# Apps
+# Developer Apps
 cask 'visual-studio-code'
+cask 'postman'
+cask 'slack'
+
+# Browser Apps
 cask 'brave-browser'
 cask 'google-chrome'
-cask 'spotify'
-cask 'discord'
-cask 'slack'
+
+# Personal Apps
 cask 'gimp'
 cask 'obs'
 cask 'notion'
-cask 'slack'
+cask 'discord'
 cask 'steam'
+cask 'spotify'
 cask 'bitwarden'
 
 # Fonts

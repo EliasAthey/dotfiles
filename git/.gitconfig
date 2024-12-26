@@ -1,0 +1,9 @@
+# This is Git's per-user configuration file.
+[user]
+    name = Elias Athey
+    email = athey.elias@gmail.com
+[pull]
+    rebase = true
+[pager]
+	branch = false
+	log = false
