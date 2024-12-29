@@ -1,6 +1,6 @@
 alias ll="ls -la"
 alias c="clear"
-alias newcom="vi ~/.oh-my-zsh/custom/aliases.zsh && exec zsh"
+alias newcom="vi $HOME/.dotfiles/aliases.zsh && exec zsh"
 alias feh="git fetch --prune"
 alias st="git status"
 alias com="git commit -m"
