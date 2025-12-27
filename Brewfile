@@ -15,6 +15,7 @@ brew 'tailscale' # Tailscale networking
 cask 'visual-studio-code'
 cask 'postman'
 cask 'slack'
+cask 'claude-code'
 
 # Browser Apps
 cask 'brave-browser'
