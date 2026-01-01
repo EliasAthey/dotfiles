@@ -2,11 +2,6 @@
 
 echo "Setting up your Mac..."
 
-# Check for Oh My Zsh and install if we don't have it
-if test ! $(which omz); then
-  /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
-fi
-
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -38,9 +33,6 @@ if test ! $(nvm -v); then
   nvm install node
 fi
 
-# Install Powerlevel10k theme
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
 
@@ -48,7 +40,6 @@ echo "...Mac setup complete"
 echo ""
 echo "Install manually:"
 echo "1. EVO (audio interface driver)"
-echo "2. ISI VPN: Citrix"
 echo ""
 echo "Configure manually:"
 echo "1. ssh key (/bin/sh ssh.sh)"

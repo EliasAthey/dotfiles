@@ -10,6 +10,7 @@ brew 'git'
 brew 'mas' # Mac App Store manager
 brew 'uv' # package manager for python
 brew 'tailscale' # Tailscale networking
+brew 'powerlevel10k' # Zsh theme
 
 # Developer Apps
 cask 'visual-studio-code'
