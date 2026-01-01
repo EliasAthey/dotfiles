@@ -8,12 +8,34 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 
 # Path to your dotfiles.
-export DOTFILES=$HOME/.dotfiles
+export DOTFILES=$HOME/dotfiles
 
 
-# Setup auto-complete
+# Setup auto-complete in the way that Oh-My-Zsh did
 autoload -Uz compinit
 compinit
+
+# Load completion list module
+zmodload -i zsh/complist
+
+# Options
+setopt auto_menu         # show menu on tab
+setopt complete_in_word  # complete from cursor
+setopt always_to_end     # cursor to end after complete
+
+# Menu selection with highlighting
+zstyle ':completion:*' menu select
+
+# Completers
+zstyle ':completion:*' completer _expand _complete _ignored _approximate
+
+# Case-insensitive, partial-word, substring completion
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*' 'l:|=* r:|=*'
+
+# Caching
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
 
 
 # History settings
@@ -45,4 +67,4 @@ fi
 
 
 # Aliases
-[[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f "$DOTFILES/.zsh_aliases" ]] && source "$DOTFILES/.zsh_aliases"

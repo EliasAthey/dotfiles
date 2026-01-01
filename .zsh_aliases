@@ -1,6 +1,11 @@
+# Edit this file quickly and reload
+alias newcom="vi $DOTFILES/.zsh_aliases && exec zsh"
+
+# common
 alias ll="ls -la"
 alias c="clear"
-alias newcom="vi $HOME/.dotfiles/aliases.zsh && exec zsh"
+
+# git
 alias feh="git fetch --prune"
 alias st="git status"
 alias com="git commit -m"
